@@ -1,15 +1,16 @@
 .header{
-    background:pink
-    
+    background:pink;
+  
 }
 
 .body{
     
+      text-align:center;
     
 }
 
 .footer{
     
-    
+    text-align:center;
     
 }
