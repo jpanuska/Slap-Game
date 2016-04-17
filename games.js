@@ -2,36 +2,85 @@
 
 
 var health = 100
+var name = "Player Abuser"
+var hits = 0
 
-function slap() {
-    health = health - 1;
-    alert(health);
+// P2 step 2
+var Options = function (name, modifier, description) {
+    this.name = name;
+    this.modifier = modifier;
+    this.description = description;
+    this.draw = function () { }
+}
+//Step 3
 
+var itemToUse = {
+    shield: new Options("Shields", 0.3, "This is for protecting your body"),
+    armor: new Options("Armor", 0.5, "This is for protection your torso"),
+    helmet: new Options("Helmut", 0.8, "This is for protecting your head")
 }
 
 
+var player= {
+    
+    items:[items.shield]
+    
+          function addMods(){
+              var modTotal = 0
+              
+     for (var i = 0; i < itemToUse.length; i++) {         
+        modTotal = modTotal + 1 
+    //     var currentItem = ItemsForProtection.items.protector[0];
 
-function punch() {
-    health = health - 5;
-    alert(health);
-    //   update()
-}
+    //     if (current.instrument === instrument) {
+    //         return currentMember.name + ' is in the band and plays ' + currentMember.instrument;
+              
+                     }
+ 
+ 
+ }
+ 
+      
+    player.itemToUse.push(shield),
+    
+    
 
 
 
 
-function kick() {
-    health = health - 10;
-    alert(health);
-    //   update()  
+            // }  
 
-}
+            function slap() {
+                health = health - 1;
+                hits = hits + 1;
+                //   alert(health);
+                update()
+
+            }
+
+            function punch() {
+                health = health - 5;
+                hits = hits + 1;
+                //   alert(health);
+                update()
+            }
+            function kick() {
+                health = health - 10;
+                hits = hits + 1;
+                //  alert(health);
+                update()
+
+            }
 
 
+            function update() {
 
+                document.getElementById("healthArea").innerText = "Health = " + health + "  Hits = " + hits + "  Name = " + name;
 
-// function update()
+                if (health <= 0) {
+                    document.getElementById("healthArea").classList.add("dangerHeader")
+                } else {
+                    document.getElementById("healthArea").classList.add("healthArea")
+                }
 
-// document.getElementById
-
-  
+            }
