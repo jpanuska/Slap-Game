@@ -1,11 +1,9 @@
 
-
-
 var health = 100
 var name = "Player Abuser"
 var hits = 0
 
-// P2 step 2
+// P2 step Use Capital O on Options because it is a Constructor
 var Options = function (name, modifier, description) {
     this.name = name;
     this.modifier = modifier;
@@ -20,67 +18,71 @@ var itemToUse = {
     helmet: new Options("Helmut", 0.8, "This is for protecting your head")
 }
 
+var player = {
 
-var player= {
+    items: [items.shield]
     
-    items:[items.shield]
-    
-          function addMods(){
-              var modTotal = 0
-              
-     for (var i = 0; i < itemToUse.length; i++) {         
-        modTotal = modTotal + 1 
-    //     var currentItem = ItemsForProtection.items.protector[0];
+          function addMods(totalOfModifiers){
 
-    //     if (current.instrument === instrument) {
-    //         return currentMember.name + ' is in the band and plays ' + currentMember.instrument;
+        var modTotal = 0;
               
-                     }
- 
- 
- }
- 
+for (var i = 0; i < itemToUse.length; i++) {
+    if currentItemToUse === itemToUse[i].name
+        modTotal = modTotal + itemToUse[i, 2];
+    health = heatlh + modTotal;
+    {
+        totalOfModifiers = modTotal;
+      else
       
-    player.itemToUse.push(shield),
-    
-    
+      
+      
+         
+        //     var currentItem = ItemsForProtection.items.protector[0];
+
+        //     if (current.instrument === instrument) {
+        //         return currentMember.name + ' is in the band and plays ' + currentMember.instrument;
+
+    }
 
 
+}
 
 
-            // }  
+player.itemToUse.push(shield),
 
-            function slap() {
-                health = health - 1;
-                hits = hits + 1;
-                //   alert(health);
-                update()
+    // }  
 
-            }
+    function slap() {
+        health = health - 1;
+        hits = hits + 1;
+        //   alert(health);
+        update()
 
-            function punch() {
-                health = health - 5;
-                hits = hits + 1;
-                //   alert(health);
-                update()
-            }
-            function kick() {
-                health = health - 10;
-                hits = hits + 1;
-                //  alert(health);
-                update()
+    }
 
-            }
+function punch() {
+    health = health - 5;
+    hits = hits + 1;
+    //   alert(health);
+    update()
+}
+function kick() {
+    health = health - 10;
+    hits = hits + 1;
+    //  alert(health);
+    update()
+
+}
 
 
-            function update() {
+function update() {
 
-                document.getElementById("healthArea").innerText = "Health = " + health + "  Hits = " + hits + "  Name = " + name;
+    document.getElementById("healthArea").innerText = "Health = " + health + "  Hits = " + hits + "  Name = " + name;
 
-                if (health <= 0) {
-                    document.getElementById("healthArea").classList.add("dangerHeader")
-                } else {
-                    document.getElementById("healthArea").classList.add("healthArea")
-                }
+    if (health <= 0) {
+        document.getElementById("healthArea").classList.add("dangerHeader")
+    } else {
+        document.getElementById("healthArea").classList.add("healthArea")
+    }
 
-            }
+}
